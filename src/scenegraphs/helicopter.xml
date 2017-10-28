@@ -1,0 +1,227 @@
+<scene>
+    <instance name="triangle" path="models/triangle"></instance>
+    <instance name="cylinder" path="models/cylinder"></instance>
+    <instance name="sphere" path="models/sphere"></instance>
+    <image name="cockpit" path="textures/helicopter.png" />
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.8 0.8 0.8</diffuse>
+        <specular>0.8 0.8 0.8</specular>
+        <position>0 0 0</position>
+        <spotangle>30</spotangle>
+        <spotdirection>0 -1 0 </spotdirection>
+    </light>
+    <transform>
+        <set>
+            <translate>0 0 0</translate>
+            <scale>250 250 250</scale>
+        </set>
+        <group name="unit-length-helicopter">
+            <transform>
+                <set>
+                    <scale>0.008 0.008 0.008</scale>
+                </set>
+                <group>
+                    <transform>
+                        <set>
+                            <translate>0 50 0</translate>
+                        </set>
+                        <group name="main-rotor">
+                            <transform name="main-propeller">
+                                <set>
+                                    <translate>0 10 0</translate>
+                                    <scale>4 0 4</scale>
+                                    <rotate>90 1 0 0</rotate>
+                                </set>
+                                <group>
+                                    <transform name="blade">
+                                        <set>
+                                            <scale>1 5 0</scale>
+                                            <translate>0 -1 0</translate>
+                                        </set>
+                                        <object instanceof="triangle">
+                                            <material>
+                                                <ambient>0.6 0.6 0.6</ambient>
+                                                <diffuse>0.9 0.9 0.9</diffuse>
+                                                <specular>0.3 0.3 0.3</specular>
+                                                <shininess>150</shininess>
+                                            </material>
+                                        </object>
+                                    </transform>
+                                    <transform name="blade2">
+                                        <set>
+                                            <rotate>120 0 0 1</rotate>
+                                        </set>
+                                        <group copyof="blade">
+                                        </group>
+                                    </transform>
+                                    <transform name="blade3">
+                                        <set>
+                                            <rotate>240 0 0 1</rotate>
+                                        </set>
+                                        <group copyof="blade">
+                                        </group>
+                                    </transform>
+                                </group>
+                            </transform>
+                            <transform name="shaft">
+                                <set>
+                                    <scale>1 10 1</scale>
+                                </set>
+                                <object instanceof="cylinder">
+                                    <material>
+                                        <ambient>0.16 0.15 0.6</ambient>
+                                        <diffuse>0.5 0.5 0.5</diffuse>
+                                        <specular>0.5 0.5 0.5</specular>
+                                        <shininess>50</shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                        </group>
+                    </transform>
+                    <group name="body">
+                        <transform name="cockpit">
+                            <set>
+                                <translate>0 30 0</translate>
+                                <scale>20 20 20</scale>
+                            </set>
+                            <object instanceof="sphere" texture="cockpit">
+                                <material>
+                                    <ambient>0.5 0.5 0.5</ambient>
+                                    <diffuse>0.5 0.5 0.5</diffuse>
+                                    <specular>0.8 0.8 0.8</specular>
+                                    <shininess>20</shininess>
+                                </material>
+                            </object>
+                        </transform>
+                        <group name="landing-gear">
+                            <transform>
+                                <set>
+                                    <translate>0 8 10</translate>
+                                </set>
+                                <group name="left-gear">
+                                    <transform name="front-support">
+                                        <set>
+                                            <translate>-10 0 0</translate>
+                                            <scale>0.5 10 0.5</scale>
+                                        </set>
+                                        <object instanceof="cylinder">
+                                            <material>
+                                                <ambient>0.2 0.2 0.2</ambient>
+                                                <diffuse>0.2 0.2 0.2</diffuse>
+                                                <specular>0.2 0.2 0.2</specular>
+                                                <shininess>10</shininess>
+                                            </material>
+                                        </object>
+                                    </transform>
+                                    <transform name="rear-support">
+                                        <set>
+                                            <translate>20 0 0</translate>
+                                        </set>
+                                        <group copyof="front-support">
+                                        </group>
+                                    </transform>
+                                    <transform name="skid">
+                                        <set>
+                                            <translate>20 0 0</translate>
+                                            <rotate>90 0 0 1</rotate>
+                                            <scale>0.5 40 0.5</scale>
+                                        </set>
+                                        <object instanceof="cylinder">
+                                            <material>
+                                                <ambient>0.2 0.2 0.2</ambient>
+                                                <diffuse>0.2 0.2 0.2</diffuse>
+                                                <specular>0.2 0.2 0.2</specular>
+                                                <shininess>10</shininess>
+                                            </material>
+                                        </object>
+                                    </transform>
+                                </group>
+                            </transform>
+                            <transform>
+                                <set>
+                                    <translate>0 8 -10</translate>
+                                </set>
+                                <group name="right-gear">
+                                    <group copyof="left-gear">
+                                    </group>
+                                </group>
+                            </transform>
+                        </group>
+                    </group>
+                    <transform>
+                        <set>
+                            <translate>20 30 0</translate>
+                        </set>
+                        <group name="tail">
+                            <transform name="tail-body">
+                                <set>
+                                    <rotate>-90 0 0 1</rotate>
+                                    <scale>1 50 1</scale>
+                                </set>
+                                <object instanceof="cylinder">
+                                    <material>
+                                        <ambient>0.16 0.15 0.6</ambient>
+                                        <diffuse>0.5 0.5 0.5</diffuse>
+                                        <specular>0.5 0.5 0.5</specular>
+                                        <shininess>50</shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                            <transform name="tail-end">
+                                <set>
+                                    <translate>48 0 0</translate>
+                                    <scale>4 12 0</scale>
+                                    <rotate>90 0 0 1</rotate>
+                                    <translate>0 -1 0</translate>
+                                </set>
+                                <object instanceof="triangle">
+                                    <material>
+                                        <ambient>0.8 0.8 0.8</ambient>
+                                        <diffuse>0.9 0.9 0.9</diffuse>
+                                        <specular>0.8 0.8 0.8</specular>
+                                        <shininess>100</shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                            <transform>
+                                <set>
+                                    <translate>52 0 5</translate>
+                                </set>
+                                <group name="tail-rotor">
+                                    <transform name="tail-propeller">
+                                        <set>
+                                            <translate>0 0 0</translate>
+                                        </set>
+                                        <group>
+                                            <transform name="tail-blade">
+                                                <group copyof="blade">
+                                                </group>
+                                            </transform>
+                                            <transform name="tail-blade2">
+                                                <set>
+                                                    <rotate>180 0 0 1</rotate>
+                                                </set>
+                                                <group copyof="tail-blade">
+                                                </group>
+                                            </transform>
+                                        </group>
+                                    </transform>
+                                    <transform name="tail-shaft">
+                                        <set>
+                                            <rotate>-90 1 0 0</rotate>
+                                            <scale>1 0.5 1</scale>
+                                        </set>
+                                        <group copyof="shaft">
+                                        </group>
+                                    </transform>
+                                </group>
+                            </transform>
+                        </group>
+                    </transform>
+                </group>
+            </transform>
+        </group>
+    </transform>
+</scene>
+
