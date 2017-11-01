@@ -1,0 +1,418 @@
+<scene>
+    <instance name="cylinder" path="models/cylinder"></instance>
+    <instance name="mycylinder" path="models/mycylinder.obj" />
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.8 0.8 0.8</diffuse>
+        <specular>0.8 0.8 0.8</specular>
+        <position>80 40 0</position>
+        <spotangle>20</spotangle>
+        <spotdirection>1.5 -1 0 </spotdirection>
+    </light>
+    <transform>
+        <set>
+            <translate>0 0 0</translate>
+            <scale>250 250 250</scale>
+        </set>
+        <group name="unit-length-bicycle">
+            <transform>
+                <set>
+                    <scale>0.008 0.008 0.008</scale>
+                </set>
+                <group>
+                    <group name="propulsion">
+                        <group name="wheels">
+                            <transform name="rear-wheel">
+                                <set>
+                                    <translate>-40 0 0</translate>
+                                </set>
+                                <transform name="rwheel">
+                                    <set>
+                                        <translate>0 0 0</translate>
+                                    </set>
+                                    <group name="total-wheel">
+                                        <transform>
+                                            <set>
+                                                <rotate>90 1 0 0</rotate>
+                                                <scale>20 1 20</scale>
+                                            </set>
+                                            <object instanceof="mycylinder">
+                                                <material>
+                                                    <ambient> 0.2 0.2 0.2 </ambient>
+                                                    <diffuse> 0.5 0.5 0.5 </diffuse>
+                                                    <specular> 0.3 0.3 0.3 </specular>
+                                                    <shininess> 1 </shininess>
+                                                </material>
+                                            </object>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <object name="spoke" instanceof="cylinder">
+                                                <material>
+                                                    <ambient> 0.6 0.6 0.6 </ambient>
+                                                    <diffuse> 0.7 0.7 0.7 </diffuse>
+                                                    <specular> 0.8 0.8 0.8 </specular>
+                                                    <shininess> 100 </shininess>
+                                                </material>
+                                            </object>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>45 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>90 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>135 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>180 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>225 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>270 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>315 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>22.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>67.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>112.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>157.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>202.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>247.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>292.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                        <transform>
+                                            <set>
+                                                <rotate>337.5 0 0 1</rotate>
+                                                <scale>0.25 20 0.25</scale>
+                                            </set>
+                                            <group copyof="spoke">
+                                            </group>
+                                        </transform>
+                                    </group>
+                                </transform>
+                            </transform>
+                            <transform name="front-wheel">
+                                <set>
+                                    <translate>40 0 0</translate>
+                                </set>
+                                <transform name="fwheel">
+                                    <set>
+                                        <translate>0 0 0</translate>
+                                    </set>
+                                    <group copyof="total-wheel"></group>
+                                </transform>
+                            </transform>
+                        </group>
+                        <transform name="mechanism">
+                            <set>
+                                <translate>0 0 0</translate>
+                            </set>
+                            <group name="mechanism-elements">
+                                <transform name="gear">
+                                    <set>
+                                        <rotate>90 1 0 0</rotate>
+                                        <scale>5 1 5</scale>
+                                    </set>
+                                    <object instanceof="cylinder">
+                                        <material>
+                                            <ambient> 0.8 0.8 0.8 </ambient>
+                                            <diffuse> 0.9 0.9 0.9 </diffuse>
+                                            <specular> 0.9 0.9 0.9 </specular>
+                                            <shininess> 100 </shininess>
+                                        </material>
+                                    </object>
+                                </transform>
+                                <transform name="connector">
+                                    <set>
+                                        <translate>0 0 -2.5</translate>
+                                        <rotate>90 1 0 0</rotate>
+                                        <scale>0.25 5 0.25</scale>
+                                    </set>
+                                    <object instanceof="cylinder">
+                                        <material>
+                                            <ambient> 0.8 0.8 0.8 </ambient>
+                                            <diffuse> 0.9 0.9 0.9 </diffuse>
+                                            <specular> 0.9 0.9 0.9 </specular>
+                                            <shininess> 100 </shininess>
+                                        </material>
+                                    </object>
+                                </transform>
+                                <transform name="right-pedal-bar">
+                                    <set>
+                                        <translate>0 0 -2.5</translate>
+                                    </set>
+                                    <transform name="pedal-bar">
+                                        <set>
+                                            <scale>0.25 3 0.25</scale>
+                                        </set>
+                                        <object instanceof="cylinder">
+                                            <material>
+                                                <ambient> 0.8 0.8 0.8 </ambient>
+                                                <diffuse> 0.9 0.9 0.9 </diffuse>
+                                                <specular> 0.9 0.9 0.9 </specular>
+                                                <shininess> 100 </shininess>
+                                            </material>
+                                        </object>
+                                    </transform>
+                                </transform>
+                                <transform name="left-pedal-bar">
+                                    <set>
+                                        <translate>0 -3 2.5</translate>
+                                        <group copyof="pedal-bar"></group>
+                                    </set>
+                                </transform>
+                                <transform name="right-pedal">
+                                    <set>
+                                        <translate>0 3 -7.5</translate>
+                                    </set>
+                                    <transform name="rpedal">
+                                        <set>
+                                            <scale>2.5 0.25 5</scale>
+                                        </set>
+                                        <object instanceof="cylinder">
+                                            <material>
+                                                <ambient> 0.2 0.2 0.2 </ambient>
+                                                <diffuse> 0.2 0.2 0.2 </diffuse>
+                                                <specular> 0.2 0.2 0.2 </specular>
+                                                <shininess> 1 </shininess>
+                                            </material>
+                                        </object>
+                                    </transform>
+                                </transform>
+                                <transform name="left-pedal">
+                                    <set>
+                                        <translate>0 -3 7.5</translate>
+                                    </set>
+                                    <transform name="lpedal">
+                                        <set>
+                                            <scale>2.5 0.25 5</scale>
+                                        </set>
+                                        <object instanceof="cylinder">
+                                            <material>
+                                                <ambient> 0.2 0.2 0.2 </ambient>
+                                                <diffuse> 0.2 0.2 0.2 </diffuse>
+                                                <specular> 0.2 0.2 0.2 </specular>
+                                                <shininess> 1 </shininess>
+                                            </material>
+                                        </object>
+                                    </transform>
+                                </transform>
+                            </group>
+                        </transform>
+                    </group>
+                    <group name="frame">
+                        <transform name="bottom-bar">
+                            <set>
+                                <rotate>90 0 0 1</rotate>
+                                <scale>0.5 40 0.5</scale>
+                            </set>
+                            <object instanceof="cylinder">
+                                <material>
+                                    <ambient>0.735 0 0</ambient>
+                                    <diffuse>0.8 0.2 0.2</diffuse>
+                                    <specular>0.8 0.3 0.3</specular>
+                                    <shininess> 100 </shininess>
+                                </material>
+                            </object>
+                        </transform>
+                        <transform name="top-bar">
+                            <set>
+                                <translate>21.5 37.5 0</translate>
+                            </set>
+                            <group copyof="bottom-bar"></group>
+                        </transform>
+                        <transform name="front-bar">
+                            <set>
+                                <rotate>-30 0 0 1</rotate>
+                                <scale>0.5 42.5 0.5</scale>
+                            </set>
+                            <object instanceof="cylinder">
+                                <material>
+                                    <ambient>0.735 0 0</ambient>
+                                    <diffuse>0.8 0.2 0.2</diffuse>
+                                    <specular>0.8 0.3 0.3</specular>
+                                    <shininess> 100 </shininess>
+                                </material>
+                            </object>
+                        </transform>
+                        <transform name="rear-bar">
+                            <set>
+                                <translate>-40 0 0</translate>
+                            </set>
+                            <group copyof="front-bar"></group>
+                        </transform>
+                        <transform name="support-bar">
+                            <set>
+                                <translate>0 0 0</translate>
+                                <rotate>27 0 0 1</rotate>
+                                <scale>0.5 42.5 0.5</scale>
+                            </set>
+                            <object instanceof="cylinder">
+                                <material>
+                                    <ambient>0.735 0 0</ambient>
+                                    <diffuse>0.8 0.2 0.2</diffuse>
+                                    <specular>0.8 0.3 0.3</specular>
+                                    <shininess> 100 </shininess>
+                                </material>
+                            </object>
+                        </transform>
+                    </group>
+                    <group name="human-interaction">
+                        <group name="handlebar">
+                            <transform name="handle-connector">
+                                <set>
+                                    <translate>40 0 0</translate>
+                                    <rotate>25 0 0 1</rotate>
+                                    <scale>0.5 60 0.5</scale>
+                                </set>
+                                <object instanceof="cylinder">
+                                    <material>
+                                        <ambient>0.735 0 0</ambient>
+                                        <diffuse>0.8 0.2 0.2</diffuse>
+                                        <specular>0.8 0.3 0.3</specular>
+                                        <shininess> 100 </shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                            <transform name="handles">
+                                <set>
+                                    <translate>15 54 -12.5</translate>
+                                    <rotate>90 1 0 0</rotate>
+                                    <scale>0.5 25 0.5</scale>
+                                </set>
+                                <object instanceof="cylinder">
+                                    <material>
+                                        <ambient> 0.2 0.2 0.2 </ambient>
+                                        <diffuse> 0.2 0.2 0.2 </diffuse>
+                                        <specular> 0.2 0.2 0.2 </specular>
+                                        <shininess> 1 </shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                        </group>
+                        <group name="bike-seat">
+                            <transform name="adjustment">
+                                <set>
+                                    <translate>-19 38 0</translate>
+                                    <scale>0.5 5 0.5</scale>
+                                </set>
+                                <object instanceof="cylinder">
+                                    <material>
+                                        <ambient> 0.6 0.6 0.6 </ambient>
+                                        <diffuse> 0.7 0.7 0.7 </diffuse>
+                                        <specular> 0.8 0.8 0.8 </specular>
+                                        <shininess> 100 </shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                            <transform name="seat">
+                                <set>
+                                    <translate>-19 42 0</translate>
+                                    <scale>5 0.5 2</scale>
+                                </set>
+                                <object instanceof="cylinder">
+                                    <material>
+                                        <ambient> 0.2 0.2 0.2 </ambient>
+                                        <diffuse> 0.2 0.2 0.2 </diffuse>
+                                        <specular> 0.2 0.2 0.2 </specular>
+                                        <shininess> 1 </shininess>
+                                    </material>
+                                </object>
+                            </transform>
+                        </group>
+                    </group>
+                </group>
+            </transform>
+        </group>
+    </transform>
+</scene>

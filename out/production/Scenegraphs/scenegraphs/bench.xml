@@ -1,0 +1,147 @@
+<scene>
+    <instance name="box" path="models/box"></instance>
+    <instance name="cylinder" path="models/cylinder"></instance>
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.8 0.8 0.8</diffuse>
+        <specular>0.8 0.8 0.8</specular>
+        <position>0 0 0</position>
+        <spotangle>180</spotangle>
+        <spotdirection>0 1 0</spotdirection>
+    </light>
+    <transform>
+        <set>
+            <translate>0 0 0</translate>
+            <scale>300 300 300</scale>
+        </set>
+        <group name="unit-length-bench">
+            <transform>
+                <set>
+                    <scale>0.008 0.008 0.008</scale>
+                </set>
+                <group>
+                    <group name="boards">
+                        <transform name="board">
+                            <set>
+                                <rotate>90 0 1 0</rotate>
+                                <rotate>90 0 0 1</rotate>
+                                <scale>10 5 100</scale>
+                            </set>
+                            <object instanceof="box">
+                                <material>
+                                    <ambient> 0.65 0.17 0.17 </ambient>
+                                    <diffuse> 0.2 0.2 0.2 </diffuse>
+                                    <specular> 0.2 0.2 0.2 </specular>
+                                    <shininess> 1 </shininess>
+                                </material>
+                            </object>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 15 0</translate>
+                            </set>
+                            <group copyof="board"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 30 0</translate>
+                            </set>
+                            <group copyof="board"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 -10 10</translate>
+                                <rotate>-90 1 0 0</rotate>
+                            </set>
+                            <group copyof="board"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 -10 25</translate>
+                                <rotate>-90 1 0 0</rotate>
+                            </set>
+                            <group copyof="board"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 -10 40</translate>
+                                <rotate>-90 1 0 0</rotate>
+                            </set>
+                            <group copyof="board"></group>
+                        </transform>
+                    </group>
+                    <group name="supports">
+                        <transform name="support">
+                            <set>
+                                <translate>-30 -15 -3</translate>
+                                <scale>2 50 2</scale>
+                            </set>
+                            <object instanceof="cylinder">
+                                <material>
+                                    <ambient> 0.2 0.2 0.2 </ambient>
+                                    <diffuse> 0.8 0.8 0.8</diffuse>
+                                    <specular> 0.8 0.8 0.8</specular>
+                                    <shininess> 100 </shininess>
+                                </material>
+                            </object>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>60 0 0</translate>
+                            </set>
+                            <group copyof="support"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 -10 30</translate>
+                                <rotate>-90 1 0 0</rotate>
+                            </set>
+                            <group copyof="support"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>60 -10 30</translate>
+                                <rotate>-90 1 0 0</rotate>
+                            </set>
+                            <group copyof="support"></group>
+                        </transform>
+                    </group>
+                    <group name="legs">
+                        <transform name="leg">
+                            <set>
+                                <translate>-30 -32 15</translate>
+                                <scale>2 20 2</scale>
+                            </set>
+                            <object instanceof="cylinder">
+                                <material>
+                                    <ambient> 0.2 0.2 0.2 </ambient>
+                                    <diffuse> 0.8 0.8 0.8</diffuse>
+                                    <specular> 0.8 0.8 0.8</specular>
+                                    <shininess> 100 </shininess>
+                                </material>
+                            </object>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>0 0 20</translate>
+                            </set>
+                            <group copyof="leg"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>60 0 20</translate>
+                            </set>
+                            <group copyof="leg"></group>
+                        </transform>
+                        <transform>
+                            <set>
+                                <translate>60 0 0</translate>
+                            </set>
+                            <group copyof="leg"></group>
+                        </transform>
+                    </group>
+                </group>
+            </transform>
+        </group>
+    </transform>
+</scene>

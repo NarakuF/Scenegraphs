@@ -1,0 +1,64 @@
+<scene>
+    <instance name="box" path="models/box"></instance>
+    <image name="grass" path="textures/grass.jpg" />
+    <light>
+        <ambient>0.8 0.8 0.8</ambient>
+        <diffuse>0.8 0.8 0.8</diffuse>
+        <specular>0.8 0.8 0.8</specular>
+        <position>0 0 0 </position>
+        <spotangle>180</spotangle>
+        <spotdirection>1 -1 0 </spotdirection>
+    </light>
+    <group>
+        <transform>
+            <set>
+                <scale>8000 1 3000</scale>
+            </set>
+            <object instanceof="box" texture="grass">
+                <material>
+                    <ambient>0.6 0.6 0.6</ambient>
+                    <diffuse>0.9 0.9 0.9</diffuse>
+                    <specular>0.3 0.3 0.3</specular>
+                    <shininess>150</shininess>
+                </material>
+            </object>
+        </transform>
+        <transform name="bench-right">
+            <set>
+                <translate>600 0 -500</translate>
+                <rotate>-45 0 1 0</rotate>
+            </set>
+            <group name="bench-one" from="scenegraphs/bench.xml"></group>
+        </transform>
+        <transform name="bench-left">
+            <set>
+                <translate>-600 0 -500</translate>
+                <rotate>45 0 1 0</rotate>
+            </set>
+            <group name="bench-two" from="scenegraphs/bench.xml"></group>
+        </transform>
+        <transform name="counterclockwise">
+            <set>
+                <translate>400 0 0</translate>
+                <rotate>90 0 1 0</rotate>
+            </set>
+            <group name="far" from="scenegraphs/bicycle.xml">
+            </group>
+        </transform>
+        <transform name="clockwise">
+            <set>
+                <translate>200 0 0</translate>
+                <rotate>-90 0 1 0</rotate>
+            </set>
+            <group name="near" from="scenegraphs/bicycle.xml">
+            </group>
+        </transform>
+        <transform name="flying">
+            <set>
+                <translate>300 300 0</translate>
+                <rotate>90 0 1 0</rotate>
+            </set>
+            <group name="helicopter" from="scenegraphs/helicopter.xml"></group>
+        </transform>
+    </group>
+</scene>
